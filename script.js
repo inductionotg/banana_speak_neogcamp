@@ -2,7 +2,7 @@ const output = document.querySelector('#output');
 const texInput = document.querySelector('#input');
 const btnTranslate = document.querySelector('.button');
 
-var url="https://api.funtranslations.com/translate/chef.json";
+var url="https://api.funtranslations.com/translate/minion.json";
 
 function constructUrl(text){
     return url + "?" + "text=" + text;
@@ -22,8 +22,8 @@ function apply(){
     .then(json=>{
         output.textContent = json.contents.translated;
         output.style.padding="20px";
-        output.style.fontSize="1rem";
-        output.style.color="red";
+        output.style.fontSize="2rem";
+        output.style.color="yellow";
         console.log("json.contents.translated");
     })
     .catch(errorHandler))
